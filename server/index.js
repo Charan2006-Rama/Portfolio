@@ -40,8 +40,6 @@ app.post('/api/contact', async (req, res) => {
 
     const emailUser = process.env.EMAIL_USER;
     const emailPass = process.env.EMAIL_PASS;
-    const recipientEmail = process.env.RECIPIENT_EMAIL || 'ramacharanbalivada2006@gmail.com';
-
     // If SMTP Credentials exist in .env, send via Nodemailer
     if (emailUser && emailPass) {
       const transporter = nodemailer.createTransport({
